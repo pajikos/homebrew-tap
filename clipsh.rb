@@ -5,23 +5,23 @@
 class Clipsh < Formula
   desc "Clipboard transport over SSH — screenshots, text, or any file."
   homepage "https://github.com/pajikos/clipsh"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   depends_on "pngpaste" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pajikos/clipsh/releases/download/v0.3.0/clipsh_0.3.0_darwin_x86_64.tar.gz"
-      sha256 "d98379691b92318977cab1dd7e77ceec85899c154d04f56431ee0c18a3bb8d60"
+      url "https://github.com/pajikos/clipsh/releases/download/v0.4.0/clipsh_0.4.0_darwin_x86_64.tar.gz"
+      sha256 "cb210af4b9075cd9a83be0d35589255021fd43f4b6f8ae41f3ec59fe79be25fe"
 
       define_method(:install) do
         bin.install "clipsh"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pajikos/clipsh/releases/download/v0.3.0/clipsh_0.3.0_darwin_arm64.tar.gz"
-      sha256 "6a00829486b45e6de87baf04ba6862626242668e55f0526e5b7054c00bf0baa2"
+      url "https://github.com/pajikos/clipsh/releases/download/v0.4.0/clipsh_0.4.0_darwin_arm64.tar.gz"
+      sha256 "33d2f873dda9c7b39d4e365d48bf7ef45f337aa9932c5153f89eb6b6124fbbf4"
 
       define_method(:install) do
         bin.install "clipsh"
@@ -31,15 +31,15 @@ class Clipsh < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pajikos/clipsh/releases/download/v0.3.0/clipsh_0.3.0_linux_x86_64.tar.gz"
-      sha256 "06706268d5bcc91925486828cf786ddbb4883e9abb63f85947d1a566644324e6"
+      url "https://github.com/pajikos/clipsh/releases/download/v0.4.0/clipsh_0.4.0_linux_x86_64.tar.gz"
+      sha256 "38a784f909055fea5070f68d5818da3a94e78f597ff440ec07b51909e0cb0e84"
       define_method(:install) do
         bin.install "clipsh"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pajikos/clipsh/releases/download/v0.3.0/clipsh_0.3.0_linux_arm64.tar.gz"
-      sha256 "2a7382630f7a9ea4e05eccbec164954d7c436c0b464779a11995755821d48520"
+      url "https://github.com/pajikos/clipsh/releases/download/v0.4.0/clipsh_0.4.0_linux_arm64.tar.gz"
+      sha256 "b929564a19fec9297ec1d02e0dc1427ad7bcd52e433049464cb2992c026aa892"
       define_method(:install) do
         bin.install "clipsh"
       end
